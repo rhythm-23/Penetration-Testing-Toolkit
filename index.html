@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PenTest Toolkit</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🛡️ Penetration Testing Toolkit</h1>
+        <form method="POST" action="/scan">
+            <label>Module:</label>
+            <select name="module">
+                <option value="port">Port Scanner</option>
+                <option value="whois">Whois Lookup</option>
+                <option value="dns">DNS Resolver</option>
+                <option value="vuln">Vulnerability Scanner</option>
+            </select>
+
+            <label>Target (IP/Domain):</label>
+            <input type="text" name="target" required>
+
+            <label>Ports (comma-separated):</label>
+            <input type="text" name="ports" placeholder="e.g. 22,80,443">
+
+            <button type="submit">Run</button>
+        </form>
+
+        {% if result %}
+        <div class="output">
+            <h2>Result:</h2>
+            <pre>{{ result }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
